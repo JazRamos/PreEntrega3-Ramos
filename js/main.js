@@ -14,7 +14,7 @@ function productoEnCarrito(producto) {
 }
 
 function cargarProductosEnCarrito() {
-    let precioProducto;
+    let precioProducto;  
     let nombreProducto;
     let cantidad;
 }
@@ -51,7 +51,7 @@ alert('Gracias por comprar en "Comprá lo que tengas ganas!"');
 function devolverCompra() {
     for (let i = 0; i < carrito.length; i++) {
         console.log(carrito[i]);
-    }
+    } 
 }
 
 cargarProductosEnCarrito();
