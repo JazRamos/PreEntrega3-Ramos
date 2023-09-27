@@ -1,9 +1,9 @@
 const productos = [{
     id: 1,
-    foto: "https://cdn.pixabay.com/photo/2018/04/05/08/47/agate-3292211_1280.jpg",
+    foto: "https://res.cloudinary.com/diklj3m6q/image/upload/v1695790274/suo92n9zwmnfb53jocbw.jpg",
     nombre: "Ágata",
     descripcion: "Transmite energía positiva, vitalidad aumentando el autoestima. Logros materiales.",
-    precio: 1000
+    precio:1000
 },
 {
     id: 2,
