@@ -9,7 +9,7 @@ const productos = [{
     id: 2,
     foto: "https://cdn.pixabay.com/photo/2018/04/17/17/28/amethyst-3328161_1280.jpg",
     nombre: "Amatista",
-    descripcion: "Piedra de la transmutación. Calma la mente. Facilita el sueño.",
+    descripcion: "Piedra de la transmutación. Calma la mente. Facilita el sueño. Ayuda a la meditación.",
     precio: 1000
 },
 {

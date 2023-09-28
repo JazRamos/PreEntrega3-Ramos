@@ -8,9 +8,9 @@
 
 .titulo-header {
     display: flex;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-left: 10px;
-    padding-bottom: 5px;
+   
     background-color: #eadae6;
     color: #254441;
     font-family: "Poppins";
