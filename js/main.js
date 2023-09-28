@@ -27,5 +27,17 @@ function cristalesCards(lista) {
     } 
 }
 
-cristalesCards(productos);
 
+function obtenerJSON(){
+    const URLJSON='/productos.json';
+    fetch(URLJSON)
+        .then((result) => result.json())
+        .then((productos) => {
+            console.log(productos);
+            const cristalesCards = productos.cristales;
+           
+        })
+        .catch((e)=> console.log(e))
+}
+cristalesCards(productos);
+obtenerJSON();
