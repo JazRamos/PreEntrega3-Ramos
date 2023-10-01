@@ -1,5 +1,5 @@
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-console.log(carrito);
+
 const cardsProductos = document.getElementById("cristales");
 
 
@@ -32,7 +32,6 @@ function cristalesCards(lista) {
     function agregarAlCarrito(productos) {
         carrito.push(productos);
         console.table(carrito);
-        alert(`Agregaste ${productos.nombre} al carro 🛒`);
     }
 }
 
