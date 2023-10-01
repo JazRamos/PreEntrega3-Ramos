@@ -1,14 +1,7 @@
-const carrito = [];
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+console.log(carrito);
 const cardsProductos = document.getElementById("cristales");
 
-function productoEnCarrito(producto) {
-    carrito.push(producto);
-}
-function cargarProductosEnCarrito() {
-    let precioProducto;  
-    let nombreProducto;
-    let cantidad;
-}
 
 function cristalesCards(lista) {
     for (const prod of lista) {
@@ -20,12 +13,31 @@ function cristalesCards(lista) {
                     <p class="card-text">
                     ${prod.descripcion} 
                     </p><p class="card-text fs-5 fw-semibold">$${prod.precio} </p>
-                    <button type=${prod.id} class=" compra btn btn-info bi bi-cart2 fw-semibold "> Comprar</button>
+                    <button type=${prod.id} class="  btn btn-info bi bi-cart2 fw-semibold compra"> Comprar</button>
                 </div>
             </div>
         `;
     } 
+
+    let botones = document.getElementsByClassName('compra');
+    for (const boton of botones) {
+        boton.addEventListener('click', () => {
+            console.log('Hiciste click en el boton cuyo id es ' + boton.id);
+            const prodACarro = lista.find((productos) => productos.id == boton.id);
+            console.log(prodACarro);
+            agregarAlCarrito(prodACarro);
+        });
+    }
+
+    function agregarAlCarrito(productos) {
+        carrito.push(productos);
+        console.table(carrito);
+        alert(`Agregaste ${productos.nombre} al carro 🛒`);
+    }
 }
+
+cristalesCards(productos);
+
 
 
 function obtenerJSON(){
@@ -34,12 +46,14 @@ function obtenerJSON(){
         .then((result) => result.json())
         .then((productos) => {
             console.log(productos);
-            const cristalesCards = productos.cristales;
-           
+            const cristalesCards = productos.cristales; 
         })
         .catch((e)=> console.log(e))
 }
-cristalesCards(productos);
+
 obtenerJSON();
+
+
+
 
 
